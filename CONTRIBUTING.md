@@ -27,11 +27,48 @@ python3 -m pip install -r requirements.txt
 
 Alternatively, if you are familiar with `Makefile`s, you could attempt to use the `make` commands within [Makefile](Makefile) in order to automate the process.
 
+## Setting up the Environment
+
+You'll want to add a `.env` file to your project's root directory if you want to use the Kaggle API to pull in live data.
+
+```python
+# PROJECT_ROOT/.env
+
+# Environment variables go here, can be read by `python-dotenv` package:
+#
+#   `src/script.py`
+#   ----------------------------------------------------------------
+#    import dotenv
+#
+#    project_dir = os.path.join(os.path.dirname(__file__), os.pardir)
+#    dotenv_path = os.path.join(project_dir, '.env')
+#    dotenv.load_dotenv(dotenv_path)
+#   ----------------------------------------------------------------
+#
+# DO NOT ADD THIS FILE TO VERSION CONTROL!
+
+# Kaggle API key-value pairs. Uncomment as needed.
+# Setting up: https://technowhisp.com/kaggle-api-python-documentation/
+# Reference: https://stackoverflow.com/questions/49386920/download-kaggle-dataset-by-using-python
+KAGGLE_USERNAME = "xxxx"
+KAGGLE_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+```
+
+Consider copying the above code block into your new file and go from there.
+
 ## Retrieving the Data
 
 You may need to retrieve the data for your local environment. As per Kaggle rules, we do not rehost the data, but we do provide means for accessing it.  Please review Kaggle's [terms of service](https://www.kaggle.com/terms) before working with their data.
 
 You can access the dataset by visiting the [Walmart Product Data 2019](https://www.kaggle.com/promptcloud/walmart-product-data-2019) Kaggle dataset by PromptCloud.
+
+If you would like to do this using the Kaggle API, you can use the command below:
+
+```bash
+kaggle datasets download -d promptcloud/walmart-product-data-2019
+```
+
+Be sure to setup your API key in advance!
 
 ## Development
 

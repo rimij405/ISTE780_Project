@@ -12,16 +12,19 @@ This project covers the extraction and evaluation of Walmart product data featur
    1. Use the `requirements.txt` file if you use `pip`.
    2. Use the `environment.yaml` file if you use `conda` or `mamba`.
    3. Use the `Makefile` if you are familiar with how to operate it.
+4. Download the data locally using `doit`.
 
 You can read more about how to get started by reviewing the [contributing guide](CONTRIBUTING.md).
 
 ## Project Organization
 
     ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
+    ├── dodo.py            <- Contains build tasks. Replaces the typical MAKEFILE with a Python automation script.
     ├── CONTRIBUTING.md    <- Contributing guide for developers wishing to contribute.
     ├── README.md          <- The top-level README for developers using this project.
-    ├── data/
+    ├── .env               <- File with envvars accessible by `python-dotenv`. Not added to version control.
+    |
+    ├── data/              <- Data folder is not included in version control.
     │   ├── external       <- Data from third party sources.
     │   ├── interim        <- Intermediate data that has been transformed.
     │   ├── processed      <- The final, canonical data sets for modeling.
@@ -32,8 +35,8 @@ You can read more about how to get started by reviewing the [contributing guide]
     ├── models/             <- Trained and serialized models, model predictions, or model summaries
     │
     ├── notebooks/          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
+    │                         the creator's identifier (eg. initials or GitHub username), and a short `-` delimited description, e.g.
+    │                         `1.0-rimij405-initial-data-exploration`.
     │
     ├── references/         <- Data dictionaries, manuals, and all other explanatory materials.
     │
