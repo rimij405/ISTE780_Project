@@ -2,60 +2,73 @@
 
 ## Overview
 
-This project covers the extraction and evaluation of Walmart product data features for classification of list price ranges. This project has been attempted as part of the ISTE 780: Data-Driven Knowledge Discovery course at the Rochester Institute of Technology.
+This project covers the extraction and evaluation of Walmart product data features for classification of list price ranges. This project has been attempted as part of the [ISTE 780: Data-Driven Knowledge Discovery](https://www.rit.edu/online/study/information-sciences-and-technologies-ms#:~:text=Credits%203-,ISTE-780,-Data%20Driven%20Knowledge) course at the [Rochester Institute of Technology](https://rit.edu/).
+
+## Getting Started
+
+1. Fork this repository.
+2. Clone the repository to your local environment.
+3. Install the dependencies. There are 3 separate options:
+   1. Use the `requirements.txt` file if you use `pip`.
+   2. Use the `environment.yaml` file if you use `conda` or `mamba`.
+   3. Use the `Makefile` if you are familiar with how to operate it.
+
+You can read more about how to get started by reviewing the [contributing guide](CONTRIBUTING.md).
 
 ## Project Organization
 
     ├── LICENSE
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
+    ├── CONTRIBUTING.md    <- Contributing guide for developers wishing to contribute.
     ├── README.md          <- The top-level README for developers using this project.
-    ├── data
+    ├── data/
     │   ├── external       <- Data from third party sources.
     │   ├── interim        <- Intermediate data that has been transformed.
     │   ├── processed      <- The final, canonical data sets for modeling.
     │   └── raw            <- The original, immutable data dump.
     │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
+    ├── docs/               <- A default Sphinx project; see sphinx-doc.org for details
     │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
+    ├── models/             <- Trained and serialized models, model predictions, or model summaries
     │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
+    ├── notebooks/          <- Jupyter notebooks. Naming convention is a number (for ordering),
     │                         the creator's initials, and a short `-` delimited description, e.g.
     │                         `1.0-jqp-initial-data-exploration`.
     │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
+    ├── references/         <- Data dictionaries, manuals, and all other explanatory materials.
     │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
+    ├── reports/            <- Generated analysis as HTML, PDF, LaTeX, etc.
+    │   └── figures/        <- Generated graphics and figures to be used in reporting
     │
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
     │                         generated with `pip freeze > requirements.txt`
     │
     ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
+    ├── src/               <- Source code for use in this project.
     │   ├── __init__.py    <- Makes src a Python module
     │   │
-    │   ├── data           <- Scripts to download or generate data
+    │   ├── data/          <- Scripts to download or generate data
     │   │   └── make_dataset.py
     │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
+    │   ├── features/       <- Scripts to turn raw data into features for modeling
     │   │   └── build_features.py
     │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
+    │   ├── models/         <- Scripts to train models and then use trained models to make predictions
     │   │   ├── predict_model.py
     │   │   └── train_model.py
     │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
+    │   └── visualization/  <- Scripts to create exploratory and results oriented visualizations
     │       └── visualize.py
     │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+    └── test/               <- Test scripts to be executed by pytest
 
 ## Attributions
 
 ### Citations
 
-Citations go here.
+PromptCloud (2019). [Walmart Product Data 2019](https://www.kaggle.com/promptcloud/walmart-product-data-2019).
+
+The crawled data was bundled into datasets that can be used by the general public for various purposes. It was released under the [CC0: Public Domain license](https://creativecommons.org/publicdomain/zero/1.0/).
 
 ### Project Template
 
