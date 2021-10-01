@@ -12,6 +12,7 @@ This project covers the extraction and evaluation of Walmart product data featur
    1. Use the `requirements.txt` file if you use `pip`.
    2. Use the `environment.yaml` file if you use `conda` or `mamba`.
    3. Use the `Makefile` if you are familiar with how to operate it.
+4. Download the data locally using `doit`.
 
 You can read more about how to get started by reviewing the [contributing guide](CONTRIBUTING.md).
 
