@@ -38,14 +38,14 @@ Field | Identifier        | Name            | Type       | Description          
 2     | `Crawl Timestamp` | Timestamp       | `datetime` | The date at which the data was crawled.       | `YYYY-MM-DD HH:MM:SS +TTTT`
 3     | `Product Url`     | URL             | `text`     | Link to product on Walmart website.           | `https://www.walmart.com/ip/<Product Name>/<Lot Number>`
 4     | `Product Name`    | Name            | `text`     | Plaintext listed name of the product.         | `<Product Name>`
-5     | `Description`     | Description     | `text`     | Plaintext description of the product.         | `<Disclaimer> | <Description>`
+5     | `Description`     | Description     | `text`     | Plaintext description of the product.         | `<Disclaimer>, <Description>`
 6     | `List Price`      | Price           | `double`   | Listed price of the product.                  | `#0.00` (Currency in USD 2019)
 7     | `Sale Price`      | Discount        | `double`   | Discounted price of the product.              | `#0.00` (Currency in USD 2019)
 8     | `Brand`           | Brand           | `text`     | Name of product brand                         | `<Brand Name>`
 9     | `Item Number`     | Item Number     | `integer`  | Unique product number assigned by Walmart.    | `xxxxxxxxx` (9 digits)
 10    | `Gtin`            | Lot Number      | `integer`  | Walmart lot number using a GTIN.              | `xxxxxxxxx` (9 digits)
 11    | `Package Size`    | Size            | `null`     | Size of the package when the product arrived. | No values supplied.
-12    | `Category`        | Category        | `text`     | Product category as classified by Walmart.    | `<Primary Category> | <Secondary Category>...`
+12    | `Category`        | Category        | `text`     | Product category as classified by Walmart.    | `<Primary Category>, <Secondary Category>...`
 13    | `Postal Code`     | Postal Code     | `null`     | Postal code of the country or region.         | No values supplied.
 14    | `Available`       | Is Purchasable? | `boolean`  | If the product is currently purchaseable.     | `[true, false]`
 
