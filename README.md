@@ -21,7 +21,9 @@ You can read more about how to get started by reviewing the [contributing guide]
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
     ├── CONTRIBUTING.md    <- Contributing guide for developers wishing to contribute.
     ├── README.md          <- The top-level README for developers using this project.
-    ├── data/
+    ├── .env               <- File with envvars accessible by `python-dotenv`. Not added to version control.
+    |
+    ├── data/              <- Data folder is not included in version control.
     │   ├── external       <- Data from third party sources.
     │   ├── interim        <- Intermediate data that has been transformed.
     │   ├── processed      <- The final, canonical data sets for modeling.
