@@ -1,10 +1,10 @@
-price-clf
-==============================
+# Walmart Product Data: Price Classifier
 
-Extraction and evaluation of Walmart product data features for classification and prediction of list price ranges.
+## Overview
 
-Project Organization
-------------
+This project covers the extraction and evaluation of Walmart product data features for classification of list price ranges. This project has been attempted as part of the ISTE 780: Data-Driven Knowledge Discovery course at the Rochester Institute of Technology.
+
+## Project Organization
 
     ├── LICENSE
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
@@ -51,7 +51,14 @@ Project Organization
     │
     └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
 
+## Attributions
 
---------
+### Citations
 
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+Citations go here.
+
+### Project Template
+
+Project based on the [cookiecutter data science](https://drivendata.github.io/cookiecutter-data-science/)  project template. Read more about the [cookiecutter tool here](https://cookiecutter.readthedocs.io/en/latest/README.html).
+
+[#cookiecutterdatascience](https://github.com/topics/cookiecutter-data-science)
