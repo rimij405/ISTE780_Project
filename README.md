@@ -18,7 +18,7 @@ You can read more about how to get started by reviewing the [contributing guide]
 ## Project Organization
 
     ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
+    ├── dodo.py            <- Contains build tasks. Replaces the typical MAKEFILE with a Python automation script.
     ├── CONTRIBUTING.md    <- Contributing guide for developers wishing to contribute.
     ├── README.md          <- The top-level README for developers using this project.
     ├── .env               <- File with envvars accessible by `python-dotenv`. Not added to version control.
