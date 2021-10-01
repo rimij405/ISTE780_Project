@@ -34,8 +34,8 @@ You can read more about how to get started by reviewing the [contributing guide]
     ├── models/             <- Trained and serialized models, model predictions, or model summaries
     │
     ├── notebooks/          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
+    │                         the creator's identifier (eg. initials or GitHub username), and a short `-` delimited description, e.g.
+    │                         `1.0-rimij405-initial-data-exploration`.
     │
     ├── references/         <- Data dictionaries, manuals, and all other explanatory materials.
     │

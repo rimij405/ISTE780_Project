@@ -48,6 +48,7 @@ You'll want to add a `.env` file to your project's root directory if you want to
 # DO NOT ADD THIS FILE TO VERSION CONTROL!
 
 # Kaggle API key-value pairs. Uncomment as needed.
+# Setting up: https://technowhisp.com/kaggle-api-python-documentation/
 # Reference: https://stackoverflow.com/questions/49386920/download-kaggle-dataset-by-using-python
 KAGGLE_USERNAME = "xxxx"
 KAGGLE_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
@@ -60,6 +61,14 @@ Consider copying the above code block into your new file and go from there.
 You may need to retrieve the data for your local environment. As per Kaggle rules, we do not rehost the data, but we do provide means for accessing it.  Please review Kaggle's [terms of service](https://www.kaggle.com/terms) before working with their data.
 
 You can access the dataset by visiting the [Walmart Product Data 2019](https://www.kaggle.com/promptcloud/walmart-product-data-2019) Kaggle dataset by PromptCloud.
+
+If you would like to do this using the Kaggle API, you can use the command below:
+
+```bash
+kaggle datasets download -d promptcloud/walmart-product-data-2019
+```
+
+Be sure to setup your API key in advance!
 
 ## Development
 
