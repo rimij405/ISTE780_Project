@@ -16,7 +16,7 @@ def main(output_filepath):
     """ Runs data download scripts to get dataset from Kaggle
         and place into the data/raw folder.
     """
-    download(output_filepath)
+    return download(output_filepath)
     
 def download(output_filepath):    
     """ Runs data download scripts to get dataset from Kaggle
@@ -28,7 +28,7 @@ def download(output_filepath):
     # Check if output file exists.
     if(os.path.isfile(output_filepath)):
         logger.warning("Dataset already exists at specified location")
-        return
+        return True
     
     # Load envvars.
     load_envvars(logger)
@@ -43,7 +43,7 @@ def download(output_filepath):
     # kaggle datasets download -d promptcloud/walmart-product-data-2019
     
     # Move to the next location.
-    move_dataset(logger, "walmart-product-data-2019.zip", output_filepath)
+    return move_dataset(logger, "walmart-product-data-2019.zip", output_filepath)
     
 def move_dataset(logger, input_filepath, output_filepath):
     """Move dataset file to the output directory location.
@@ -60,7 +60,7 @@ def move_dataset(logger, input_filepath, output_filepath):
     # Check if source file exists.
     if(not os.path.isfile(source_path)):
         logger.error("Cannot find dataset at specified path.")
-        return
+        return False
     
     logger.info("Found dataset.")
     
@@ -69,8 +69,8 @@ def move_dataset(logger, input_filepath, output_filepath):
     
     # Move the dataset, overwriting if it exists.
     move(str(source_path), str(target_path))
-    
     logger.info("Moved dataset.")
+    return True
     
 def load_envvars(logger):
     """ Load the environment variables for Kaggle authentication.

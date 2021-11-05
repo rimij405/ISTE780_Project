@@ -22,10 +22,10 @@ def main(input_filepath, output_filepath):
     
     # Check if dataset exists to be unpacked
     if not dataset_exists(logger, input_filepath):
-        return
+        return False
         
     # Attempt to unpack the zipfile.
-    unpack_dataset(logger, input_filepath, output_filepath)    
+    return unpack_dataset(logger, input_filepath, output_filepath)
 
 def load_envvars(logger):
     """ Load the environment variables for Kaggle authentication.
@@ -67,6 +67,7 @@ def unpack_dataset(logger, input_filepath, output_filepath):
     os.rmdir(str(Path(output_filepath) / "home"))
     
     logger.info('Moved extracted file')
+    return True
     
     
 if __name__ == '__main__':
