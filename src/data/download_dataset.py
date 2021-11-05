@@ -16,6 +16,12 @@ def main(output_filepath):
     """ Runs data download scripts to get dataset from Kaggle
         and place into the data/raw folder.
     """
+    download(output_filepath)
+    
+def download(output_filepath):    
+    """ Runs data download scripts to get dataset from Kaggle
+        and place into the data/raw folder.
+    """
     # Get the logger.
     logger = logging.getLogger(__name__)
     

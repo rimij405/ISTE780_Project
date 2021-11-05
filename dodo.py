@@ -11,7 +11,7 @@ import os
 import sys
 
 from tasks.conda import task_create_env
-from tasks.data import task_create_data_dir
+from tasks.data import task_create_data_dir, task_download_dataset
 
 # Ensures that the called Python is the same interpreter
 # used by the one that called the `doit` tasks.
@@ -23,15 +23,6 @@ DOIT_CONFIG = {"verbosity": 2, "action_string_formatting": "both"}
 # Get reference to the working directory.
 CWD = Path.cwd()
 
-def _task_download_dataset():
-    """
-    Download the dataset from Kaggle.
-    """
-    return {
-        "targets": ["data/raw/walmart-product-data-2019.zip"],
-        "actions": [EXECUTABLE + " src/data/download_dataset.py {targets}"],
-        "clean": True,
-    }
 
 
 def _task_unpack_dataset():
