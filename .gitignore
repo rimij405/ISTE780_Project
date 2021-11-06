@@ -7,12 +7,13 @@ __pycache__/
 .doit.db.dir
 .doit.db.bak
 
-# C extensions
+# C extensionsf
 *.so
 
 # Distribution / packaging
 .Python
 env/
+.condaenv/
 build/
 develop-eggs/
 dist/
@@ -80,9 +81,6 @@ target/
 # Jupyter NB Checkpoints
 .ipynb_checkpoints/
 
-# exclude data from source control by default
-/data/
-
 # Mac OS-specific storage files
 .DS_Store
 
@@ -92,3 +90,6 @@ target/
 
 # Mypy cache
 .mypy_cache/
+
+# pickle files
+.pickle

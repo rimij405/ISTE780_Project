@@ -1,0 +1,7 @@
+# Ignore all data files within data.
+*.*
+
+# EXCEPT for these files:
+!*/*.gitkeep
+!*.gitkeep
+!*.gitignore
