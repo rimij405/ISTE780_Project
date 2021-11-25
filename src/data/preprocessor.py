@@ -7,7 +7,7 @@ import logging
 import pandas as pd
 from pathlib import Path
 from . import load_envvars, read_data, save_data, get_interim_filepath, ARCHIVE_PATH
-from .preprocessing import filter
+from .preprocessing.filter import remove_features, remove_bad_prices
 
 @click.command()
 @click.argument("input_filepath", type=click.Path(exists=True))
@@ -59,8 +59,8 @@ def filter(input_filepath, output_filepath):
         raise ValueError("Missing dataframe.")
 
     # Filtering of the data frame.
-    df_clean = filter.remove_features(input_df)
-    df_clean = filter.remove_bad_prices(df_clean)
+    df_clean = remove_features(input_df)
+    df_clean = remove_bad_prices(df_clean)
     
     # Save the intermediate cleaned dataframe.
     save_data(logger, df_clean, output_filepath)

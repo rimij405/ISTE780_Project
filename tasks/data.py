@@ -105,15 +105,6 @@ def task_clean_data():
         target = targets[0]
         df = filter(dep, target)
         return df.shape[0] > 0
-        # return sys.executable + " src/data/clean_dataset.py {dependencies} {targets}"
-
-    # def clean2_data(dependencies, targets):
-        # """
-        # Next step.
-        # """
-        # dep = targets[0]
-        # target = targets[1]
-        # return clean2(dep, target)
 
     return {
         "file_dep": [get_source_filepath(ext=".csv")],
